@@ -22,4 +22,11 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         public void HangUpPhone(int callID) =>
             callController.HangUpPhone(callID);
     }
+
+    [SelectionBase]
+    [DisallowMultipleComponent]
+    public sealed class CallPanel : MonoBehaviour
+    {
+        
+    }
 }
