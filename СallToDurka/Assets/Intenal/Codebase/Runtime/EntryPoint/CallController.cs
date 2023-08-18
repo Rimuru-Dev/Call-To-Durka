@@ -49,8 +49,13 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             callPanel.pickUpPhoneButton.gameObject.SetActive(false);
         }
 
-        public void HangUpPhone() =>
+        public void HangUpPhone()
+        {
+            generalGameSettings.SourceAudio.Stop();
+            generalGameSettings.SourceAudio.Loop = false;
+            
             CloseCallPanel();
+        }
 
         private int currentCharacter = -1;
 
@@ -75,6 +80,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
                 generalGameSettings.SourceAudio.Stop();
                 generalGameSettings.SourceAudio.Loop = false;
+                generalGameSettings.SourceAudio.Stop();
             }
             callPanel.pickUpPhoneButton.gameObject.SetActive(true);
             callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
