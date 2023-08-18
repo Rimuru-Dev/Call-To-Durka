@@ -14,10 +14,11 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         [Header("Data's"), SerializeField] private List<CharacterData> characterDatas;
 
         [Header("View's"), SerializeField] private CallViewController callViewController;
+        [SerializeField] private CallPanel callPanel;
         private CallController callController;
 
         private void Awake() =>
-            callController = new CallController(callViewController, generalGameSettings, characterDatas);
+            callController = new CallController(callViewController, callPanel,generalGameSettings, characterDatas);
 
         private void Start() =>
             callViewController.Initialize(callController);

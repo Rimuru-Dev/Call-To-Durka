@@ -407,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchorMin.x
@@ -415,15 +415,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 588
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 260
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -455,11 +455,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 882
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -553,20 +553,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 161408515}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: HangUpPhone
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &203809840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Icon_0
       objectReference: {fileID: 0}
+    - target: {fileID: 6480886557864454953, guid: 014118181a8f45b40b1eab2a7e405879, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6866709472345331304, guid: 014118181a8f45b40b1eab2a7e405879, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1128,6 +1119,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6866709472345331304, guid: 014118181a8f45b40b1eab2a7e405879, type: 3}
   m_PrefabInstance: {fileID: 563590698}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &572945624 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4073920997059394375, guid: 014118181a8f45b40b1eab2a7e405879, type: 3}
+  m_PrefabInstance: {fileID: 563590698}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &578946084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1374,6 +1376,7 @@ Transform:
   - {fileID: 914086925}
   - {fileID: 2211564899013586043}
   - {fileID: 2084309883}
+  - {fileID: 1790103052}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1422,7 +1425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1430,15 +1433,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 588
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 260
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1470,11 +1473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1568,20 +1571,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997064760}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: PickUpPhone
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1027110447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1191256618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2506,6 +2496,54 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1790103051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790103052}
+  - component: {fileID: 1790103053}
+  m_Layer: 0
+  m_Name: CallPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1790103052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790103051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929084864}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790103053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790103051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ff0f21143c49b2abcc8b81b84263e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callPanel: {fileID: 1191256618}
+  callCharacter: {fileID: 572945624}
+  pickUpPhoneButton: {fileID: 997064761}
+  hangUpPhoneButton: {fileID: 161408516}
 --- !u!1 &1928700552
 GameObject:
   m_ObjectHideFlags: 0

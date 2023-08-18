@@ -7,16 +7,19 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
     [Serializable]
     public sealed class CallController
     {
-        private readonly CallViewController _callViewController;
+        private readonly CallViewController callViewController;
+        private readonly CallPanel callPanel;
         private readonly GeneralGameSettings generalGameSettings;
         private readonly List<CharacterData> characterDatas;
 
         public CallController(
             CallViewController callViewController,
+            CallPanel callPanel,
             GeneralGameSettings generalGameSettings,
             List<CharacterData> characterDatas)
         {
-            this._callViewController = callViewController;
+            this.callViewController = callViewController;
+            this.callPanel = callPanel;
             this.generalGameSettings = generalGameSettings;
             this.characterDatas = characterDatas;
         }
