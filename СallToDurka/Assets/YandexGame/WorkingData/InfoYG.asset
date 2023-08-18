@@ -24,7 +24,7 @@ MonoBehaviour:
   AdWhenLoadingScene: 1
   showFirstAd: 1
   adDisplayCalls: 0
-  fullscreenAdInterval: 60
+  fullscreenAdInterval: 120
   durationOfAdSimulation: 0.5
   LocalizationEnable: 0
   callingLanguageCheck: 1

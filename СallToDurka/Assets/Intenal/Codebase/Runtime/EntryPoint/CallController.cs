@@ -32,39 +32,56 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             OpenCallPanel(callID);
         }
 
-        public void PickUpPhone(int callID)
+        public void PickUpPhone()
         {
-            Debug.Log($"PickUpPhone: {callID}");
-            // SetActivePanelState(isActive: false);
-            callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
+            Debug.Log($"PickUpPhone:");
+
+            // Audio
+            {
+                generalGameSettings.SourceAudio.Loop = false;
+                generalGameSettings.SourceAudio.Stop();
+
+                var character = characterDatas.First(character => character.ID == currentCharacter);
+                character.AudioClip.Play(character.AudioClipKey);
+                character.AudioClip.Loop = true;
+            }
+
+            callPanel.pickUpPhoneButton.gameObject.SetActive(false);
         }
 
-        public void HangUpPhone(int callID)
-        {
-            Debug.Log($"HangUpPhone: {callID}");
-            CloseCallPanel(callID);
-        }
+        public void HangUpPhone() =>
+            CloseCallPanel();
+
+        private int currentCharacter = -1;
 
         private void OpenCallPanel(int callID)
         {
-            // TODO: Added validation callID
+            currentCharacter = callID;
 
             SetActivePanelState(isActive: true);
 
-            callPanel.callCharacter.sprite = characterDatas.First(character => character.ID == callID).Sprite;
-
-            // callPanel.pickUpPhoneButton.onClick.AddListener(delegate { SetActivePanelState(true); });
-            // callPanel.hangUpPhoneButton.onClick.AddListener(delegate { SetActivePanelState(false); });
+            callPanel.callCharacter.sprite = characterDatas.First(character => character.ID == currentCharacter).Sprite;
+            generalGameSettings.SourceAudio.Play(generalGameSettings.SourceAudioKey);
+            generalGameSettings.SourceAudio.Loop = true;
         }
 
-        private void CloseCallPanel(int callID)
+        private void CloseCallPanel()
         {
-            // TODO: Added validation callID
+            // Audio
+            {
+                var character = characterDatas.First(character => character.ID == currentCharacter);
+                character.AudioClip.Stop();
+                character.AudioClip.Loop = false;
+
+                generalGameSettings.SourceAudio.Stop();
+                generalGameSettings.SourceAudio.Loop = false;
+            }
+            callPanel.pickUpPhoneButton.gameObject.SetActive(true);
+            callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
+
+            YandexGame.ScriptsYG.YandexGame.FullscreenShow();
 
             SetActivePanelState(isActive: false);
-
-            callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
-            // callPanel.hangUpPhoneButton.onClick.RemoveAllListeners();
         }
 
         private void SetActivePanelState(bool isActive) =>

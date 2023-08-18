@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static RimuruDev.YandexGame.ScriptsYG.YandexGame;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 {
@@ -18,9 +20,54 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         private CallController callController;
 
         private void Awake() =>
-            callController = new CallController(callViewController, callPanel,generalGameSettings, characterDatas);
+            callController = new CallController(callViewController, callPanel, generalGameSettings, characterDatas);
 
         private void Start() =>
             callViewController.Initialize(callController);
+
+        private void OnEnable()
+        {
+            OpenFullAdEvent += OpenFullScreenAdv;
+            CloseFullAdEvent += CloseFullScreenAdv;
+
+            OpenVideoEvent += OpenVideoAdv;
+            CloseVideoEvent += CloseVideoAdv;
+        }
+
+        private void OnDisable()
+        {
+            OpenFullAdEvent -= OpenFullScreenAdv;
+            CloseFullAdEvent -= CloseFullScreenAdv;
+
+            OpenVideoEvent -= OpenVideoAdv;
+            CloseVideoEvent -= CloseVideoAdv;
+        }
+
+        private void OnDestroy()
+        {
+            OpenFullAdEvent -= OpenFullScreenAdv;
+            CloseFullAdEvent -= CloseFullScreenAdv;
+
+            OpenVideoEvent -= OpenVideoAdv;
+            CloseVideoEvent -= CloseVideoAdv;
+        }
+
+        private void OpenFullScreenAdv() =>
+            SetActiveForAD(0);
+
+        private void CloseFullScreenAdv() =>
+            SetActiveForAD(1);
+
+        private void OpenVideoAdv() =>
+            SetActiveForAD(0);
+
+        private void CloseVideoAdv() =>
+            SetActiveForAD(1);
+
+        private void SetActiveForAD(int value)
+        {
+            AudioListener.volume = value;
+            Time.timeScale = value;
+        }
     }
 }

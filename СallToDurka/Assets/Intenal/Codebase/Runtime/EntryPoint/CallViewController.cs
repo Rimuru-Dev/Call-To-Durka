@@ -16,10 +16,10 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         public void StartCall(int callID) =>
             callController.StartCall(callID);
 
-        public void PickUpPhone(int callID) =>
-            callController.PickUpPhone(callID);
+        public void PickUpPhone() =>
+            callController.PickUpPhone();
 
-        public void HangUpPhone(int callID) =>
-            callController.HangUpPhone(callID);
+        public void HangUpPhone() =>
+            callController.HangUpPhone();
     }
 }
