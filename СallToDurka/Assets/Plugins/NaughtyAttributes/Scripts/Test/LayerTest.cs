@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes;
+using Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes_SpecialCase;
+using UnityEngine;
 
-namespace NaughtyAttributes.Test
+namespace Plugins.NaughtyAttributes.Scripts.Test
 {
     public class LayerTest : MonoBehaviour
     {

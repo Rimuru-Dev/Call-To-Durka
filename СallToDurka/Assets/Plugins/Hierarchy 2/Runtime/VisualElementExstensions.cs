@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Runtime
 {
     public static class UIElementsExstensions
     {

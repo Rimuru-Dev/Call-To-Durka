@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Plugins.Audio.Core
+namespace RimuruDev.Plugins.Audio.Core
 {
     public class AudioManagement : MonoBehaviour
     {

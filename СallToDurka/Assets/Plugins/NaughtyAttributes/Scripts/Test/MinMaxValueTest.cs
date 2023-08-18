@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes;
+using Plugins.NaughtyAttributes.Scripts.Core.ValidatorAttributes;
+using UnityEngine;
 
-namespace NaughtyAttributes.Test
+namespace Plugins.NaughtyAttributes.Scripts.Test
 {
     public class MinMaxValueTest : MonoBehaviour
     {

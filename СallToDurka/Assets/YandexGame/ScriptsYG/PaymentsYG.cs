@@ -1,21 +1,21 @@
+using RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityToolbag;
 
-namespace YG
+namespace RimuruDev.YandexGame.ScriptsYG
 {
     public class PaymentsYG : MonoBehaviour
     {
-        [Tooltip("Возможность купить один товар много раз.")]
+        [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ.")]
         public bool multiplePurchase;
 
-        [Tooltip("Приписка YAN в конце цены (валюта Яндекс Игр).")]
+        [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ YAN пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ).")]
         public bool YANAddToPrice;
 
-        [Tooltip("Отображение лишь одной покупки")]
+        [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
         public bool onePurchase;
 
-        [Tooltip("Введите ID покупки.\nВ Unity Editor будет выводиться тестовая покупка для симуляции. В черновике Я.И. будет выводиться ваша покупука созданная в Я.И.")]
+        [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ID пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.\nпїЅ Unity Editor пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ.пїЅ.")]
         [ConditionallyVisible(nameof(onePurchase))]
         public string IDPurchase;
 

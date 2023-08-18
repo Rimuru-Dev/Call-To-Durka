@@ -1,14 +1,8 @@
-﻿using System;
-using System.Linq;
+﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-#if UNITY_EDITOR
-using UnityEditor;
-using UnityEditor.UIElements;
 
-#endif
-
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Runtime
 {
 #if UNITY_EDITOR
     public class Foldout : VisualElement

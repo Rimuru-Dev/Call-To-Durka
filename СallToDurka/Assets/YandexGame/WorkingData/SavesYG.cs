@@ -1,6 +1,6 @@
 ﻿using RimuruDev.Intenal.Codebase.Runtime.Storages;
 
-namespace YG
+namespace RimuruDev.YandexGame.WorkingData
 {
     [System.Serializable]
     public sealed class SavesYG

@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Reflection;
+using Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes;
+using Plugins.NaughtyAttributes.Scripts.Core.Utility;
+using Plugins.NaughtyAttributes.Scripts.Editor.Utility;
 using UnityEditor;
-using System.Reflection;
+using UnityEngine;
 
-namespace NaughtyAttributes.Editor
+namespace Plugins.NaughtyAttributes.Scripts.Editor.PropertyDrawers
 {
     [CustomPropertyDrawer(typeof(ProgressBarAttribute))]
     public class ProgressBarPropertyDrawer : PropertyDrawerBase

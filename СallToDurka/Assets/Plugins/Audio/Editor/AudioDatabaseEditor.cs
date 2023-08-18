@@ -1,8 +1,8 @@
-using Plugins.Audio.Core;
+using RimuruDev.Plugins.Audio.Core;
 using UnityEditor;
 using UnityEngine;
 
-namespace Plugins.Audio.Editor
+namespace RimuruDev.Plugins.Audio.Editor
 {
     [CustomEditor(typeof(AudioDatabase))]
     public class AudioDatabaseEditor : UnityEditor.Editor

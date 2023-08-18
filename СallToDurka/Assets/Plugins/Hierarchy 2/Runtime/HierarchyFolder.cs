@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Runtime
 {
     [AddComponentMenu("Hierarchy 2/Hierarchy Folder", 0)]
     public class HierarchyFolder : MonoBehaviour

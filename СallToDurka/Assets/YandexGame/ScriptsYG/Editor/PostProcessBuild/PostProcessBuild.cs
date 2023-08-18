@@ -1,11 +1,10 @@
-using UnityEditor;
-using UnityEngine;
-using UnityEditor.Callbacks;
-using UnityEditor.Build.Reporting;
-using UnityEditor.Build;
 using System.IO;
+using UnityEditor;
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
+using UnityEditor.Callbacks;
 
-namespace YG.Insides.BuildModify
+namespace RimuruDev.YandexGame.ScriptsYG.Editor.PostProcessBuild
 {
     public class PostProcessBuild : IPreprocessBuildWithReport
     {
@@ -23,7 +22,7 @@ namespace YG.Insides.BuildModify
         [PostProcessBuild]
         public static void ModifyIndex(BuildTarget target, string pathToBuiltProject)
         {
-            ModifyIndexFile.ModifyIndex(pathToBuiltProject);
+            ModifyIndexFile.ModifyIndexFile.ModifyIndex(pathToBuiltProject);
             ArchivingBuild.Archiving(pathToBuiltProject);
         }
     }

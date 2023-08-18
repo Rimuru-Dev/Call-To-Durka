@@ -1,8 +1,8 @@
-using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
 
-namespace YG.Insides
+namespace RimuruDev.YandexGame.ScriptsYG.Editor
 {
     public class FontMasseInstallEditorWindow : EditorWindow
     {
@@ -85,21 +85,21 @@ namespace YG.Insides
                         }
                         else
                         {
-                            Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) Не указан стандартный шрифт! Укажите его в настройках плагина InfoYG", scr.gameObject);
+                            Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ InfoYG", scr.gameObject);
                         }
                     }
 
                     if (completeObjCoint == objectsTranlate.Count)
                     {
-                        Debug.Log("The font was replaced successfully!  (ru) Замена шрифтов произведена успешно!");
+                        Debug.Log("The font was replaced successfully!  (ru) пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
                     }
                     else if (completeObjCoint == 0)
                     {
-                        Debug.Log("Fonts have not been replaced!  (ru) Замена шрифтов не произведена!");
+                        Debug.Log("Fonts have not been replaced!  (ru) пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
                     }
                     else
                     {
-                        Debug.Log($"Fonts have been partially replaced! Replaced {completeObjCoint} fonts from {objectsTranlate.Count} (ru) Замена шрифтов произведена частично! Заменено {completeObjCoint} шрифтов из {objectsTranlate.Count}");
+                        Debug.Log($"Fonts have been partially replaced! Replaced {completeObjCoint} fonts from {objectsTranlate.Count} (ru) пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ {completeObjCoint} пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ {objectsTranlate.Count}");
                     }
                 }
             }

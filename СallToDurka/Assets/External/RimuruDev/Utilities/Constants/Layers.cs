@@ -5,7 +5,7 @@
 //
 // **************************************************************** //
 
-namespace AbyssMoth.External.RimuruDev.Utilities.Constants
+namespace RimuruDev.External.RimuruDev.Utilities.Constants
 {
     public readonly struct Layers
     {

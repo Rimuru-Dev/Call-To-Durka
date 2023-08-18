@@ -1,7 +1,8 @@
 using System.IO;
+using RimuruDev.YandexGame.ScriptsYG.Inside;
 using UnityEngine;
 
-namespace YG.Insides.BuildModify
+namespace RimuruDev.YandexGame.ScriptsYG.Editor.PostProcessBuild.ModifyIndexFile
 {
     public static partial class ModifyIndexFile
     {

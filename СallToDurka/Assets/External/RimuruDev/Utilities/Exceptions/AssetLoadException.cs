@@ -7,7 +7,7 @@
 
 using System;
 
-namespace AbyssMoth.External.RimuruDev.Utilities.Exceptions
+namespace RimuruDev.External.RimuruDev.Utilities.Exceptions
 {
     public sealed class AssetLoadException : Exception
     {

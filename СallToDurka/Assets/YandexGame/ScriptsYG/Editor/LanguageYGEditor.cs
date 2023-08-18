@@ -1,12 +1,12 @@
-using UnityEngine;
 using UnityEditor;
-using UnityEngine.UI;
 using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.UI;
 
-namespace YG.Insides
+namespace RimuruDev.YandexGame.ScriptsYG.Editor
 {
     [CustomEditor(typeof(LanguageYG))]
-    public class LanguageYGEditor : Editor
+    public class LanguageYGEditor : UnityEditor.Editor
     {
         LanguageYG scr;
 
@@ -40,9 +40,9 @@ namespace YG.Insides
                     scr.textUIComponent = scr.GetComponent<Text>();
                     scr.textMeshComponent = scr.GetComponent<TextMesh>();
                 }
-                if (GUILayout.Button("Create Text компонент"))
+                if (GUILayout.Button("Create Text пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"))
                     scr.textUIComponent = scr.gameObject.AddComponent<Text>();
-                if (GUILayout.Button("Create TextMesh компонент"))
+                if (GUILayout.Button("Create TextMesh пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"))
                     scr.textMeshComponent = scr.gameObject.AddComponent<TextMesh>();
 
                 GUILayout.Space(10);
@@ -54,7 +54,7 @@ namespace YG.Insides
                 {
                     scr.infoYG = scr.GetInfoYG();
                     if (scr.infoYG == null)
-                        Debug.LogError("InfoYG not found!  (ru) InfoYG не найден!");
+                        Debug.LogError("InfoYG not found!  (ru) InfoYG пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");
                 }
             }
 
@@ -302,7 +302,7 @@ namespace YG.Insides
                     }
                     else
                     {
-                        Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) Не указан стандартный шрифт! Укажите его в настройках плагина InfoYG", scr.gameObject);
+                        Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ InfoYG", scr.gameObject);
                     }
                 }
 

@@ -1,10 +1,10 @@
-﻿using Plugins.Audio.Core;
-using Plugins.Audio.Utils;
+﻿using RimuruDev.Plugins.Audio.Core;
+using RimuruDev.Plugins.Audio.Utils;
 using UnityEditor;
 using UnityEngine;
-using AudioConfiguration = Plugins.Audio.Core.AudioConfiguration;
+using AudioConfiguration = RimuruDev.Plugins.Audio.Core.AudioConfiguration;
 
-namespace Plugins.Audio.Editor
+namespace RimuruDev.Plugins.Audio.Editor
 {
     [CustomPropertyDrawer(typeof(AudioDataProperty))]
     public class AudioDataPropertyDrawer : PropertyDrawer

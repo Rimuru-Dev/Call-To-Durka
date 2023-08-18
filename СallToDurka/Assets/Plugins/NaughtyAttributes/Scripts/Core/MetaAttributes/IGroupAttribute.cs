@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace NaughtyAttributes
+﻿namespace Plugins.NaughtyAttributes.Scripts.Core.MetaAttributes
 {
     public interface IGroupAttribute
     {

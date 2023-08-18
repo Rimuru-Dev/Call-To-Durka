@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Runtime
 {
     public static class Texture2DExtensions
     {

@@ -1,6 +1,8 @@
+using Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes;
+using Plugins.NaughtyAttributes.Scripts.Core.MetaAttributes;
 using UnityEngine;
 
-namespace NaughtyAttributes.Test
+namespace Plugins.NaughtyAttributes.Scripts.Test
 {
     public class LabelTest : MonoBehaviour
     {

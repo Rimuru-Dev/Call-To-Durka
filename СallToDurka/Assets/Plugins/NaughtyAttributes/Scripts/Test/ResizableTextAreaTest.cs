@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes;
+using UnityEngine;
 
-namespace NaughtyAttributes.Test
+namespace Plugins.NaughtyAttributes.Scripts.Test
 {
     public class ResizableTextAreaTest : MonoBehaviour
     {

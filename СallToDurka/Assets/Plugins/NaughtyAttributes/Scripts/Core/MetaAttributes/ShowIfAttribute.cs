@@ -1,6 +1,7 @@
 ﻿using System;
+using Plugins.NaughtyAttributes.Scripts.Core.Utility;
 
-namespace NaughtyAttributes
+namespace Plugins.NaughtyAttributes.Scripts.Core.MetaAttributes
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class ShowIfAttribute : ShowIfAttributeBase

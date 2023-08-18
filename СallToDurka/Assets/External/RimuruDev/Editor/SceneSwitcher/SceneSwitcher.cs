@@ -7,13 +7,13 @@
 //          - Gists:    https://gist.github.com/RimuruDev/af759ce6d9768a38f6838d8b7cc94fc8
 // **************************************************************** //
 
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using System.Diagnostics.CodeAnalysis;
+using UnityEngine;
 
-namespace AbyssMoth.External.RimuruDev.Editor.SceneSwitcher
+namespace RimuruDev.External.RimuruDev.Editor.SceneSwitcher
 {
     [SuppressMessage("ReSharper", "StringLiteralTypo")]
     public sealed class SceneSwitcher : EditorWindow

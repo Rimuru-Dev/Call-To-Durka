@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Plugins.Audio.Core
+namespace RimuruDev.Plugins.Audio.Core
 {
     [RequireComponent(typeof(AudioSource))]
     public class SourceAudio : MonoBehaviour

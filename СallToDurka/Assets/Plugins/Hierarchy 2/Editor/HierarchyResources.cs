@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Editor
 {
     internal class HierarchyResources : ScriptableObject
     {
@@ -59,7 +59,7 @@ namespace Hierarchy2
     }
 
     [CustomEditor(typeof(HierarchyResources))]
-    internal class ResourcesInspector : Editor
+    internal class ResourcesInspector : UnityEditor.Editor
     {
         HierarchyResources resources;
 

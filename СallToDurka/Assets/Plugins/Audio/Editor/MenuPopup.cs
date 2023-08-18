@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Plugins.Audio.Editor
+namespace RimuruDev.Plugins.Audio.Editor
 {
     public class MenuPopup : EditorWindow
     {

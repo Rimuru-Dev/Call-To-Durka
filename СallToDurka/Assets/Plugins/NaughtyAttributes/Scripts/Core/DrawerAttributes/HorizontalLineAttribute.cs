@@ -1,6 +1,7 @@
 ﻿using System;
+using Plugins.NaughtyAttributes.Scripts.Core.Utility;
 
-namespace NaughtyAttributes
+namespace Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes
 {
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
     public class HorizontalLineAttribute : DrawerAttribute

@@ -3,18 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Plugins.Hierarchy_2.Runtime;
 using UnityEditor;
-using UnityEditor.SceneManagement;
-using UnityEditor.Experimental.SceneManagement;
-using UnityEditorInternal;
 using UnityEditor.Callbacks;
-using UnityEditor.UIElements;
 using UnityEditor.IMGUI.Controls;
+using UnityEditor.SceneManagement;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Editor
 {
     [InitializeOnLoad]
     public sealed class HierarchyEditor
@@ -106,7 +104,7 @@ namespace Hierarchy2
 
         static void InternalReflection()
         {
-            var arrayInteralEditorType = typeof(Editor).Assembly.GetTypes();
+            var arrayInteralEditorType = typeof(UnityEditor.Editor).Assembly.GetTypes();
             InternalEditorType = arrayInteralEditorType.ToList();
             dicInternalEditorType = arrayInteralEditorType.ToDictionary(type => type.FullName);
 

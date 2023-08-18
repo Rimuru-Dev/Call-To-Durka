@@ -1,5 +1,7 @@
 
-namespace YG.Insides.BuildModify
+using RimuruDev.YandexGame.ScriptsYG.Inside;
+
+namespace RimuruDev.YandexGame.ScriptsYG.Editor.PostProcessBuild.ModifyIndexFile
 {
     public static partial class ModifyIndexFile
     {

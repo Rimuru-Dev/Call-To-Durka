@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.UIElements;
+using Plugins.Hierarchy_2.Runtime;
 using UnityEditor;
-using UnityEditor.SceneManagement;
-using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Editor
 {
     public sealed class SelectionsRenamePopup : EditorWindow
     {

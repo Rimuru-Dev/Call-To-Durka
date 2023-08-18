@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
+using System.IO;
+using Plugins.Hierarchy_2.Runtime;
 using UnityEditor;
 using UnityEditor.UIElements;
-using UnityEngine.Serialization;
-using System.IO;
+using UnityEngine;
+using UnityEngine.UIElements;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Editor
 {
     [Serializable]
     internal class HierarchySettings : ScriptableObject
@@ -851,7 +850,7 @@ namespace Hierarchy2
     }
 
     [CustomEditor(typeof(HierarchySettings))]
-    internal class SettingsInspector : Editor
+    internal class SettingsInspector : UnityEditor.Editor
     {
         HierarchySettings settings;
 

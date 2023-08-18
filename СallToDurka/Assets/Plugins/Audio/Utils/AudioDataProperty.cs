@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Plugins.Audio.Utils
+namespace RimuruDev.Plugins.Audio.Utils
 {
     [Serializable]
     public class AudioDataProperty

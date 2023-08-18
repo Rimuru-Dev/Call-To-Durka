@@ -1,6 +1,7 @@
 ﻿using System;
+using Plugins.NaughtyAttributes.Scripts.Core.Utility;
 
-namespace NaughtyAttributes
+namespace Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes
 {
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
     public class ProgressBarAttribute : DrawerAttribute

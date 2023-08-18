@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Plugins.Hierarchy_2.Runtime;
+using UnityEditor;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-using UnityEditor;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Editor
 {
     public class SceneRenamePopup : EditorWindow
     {

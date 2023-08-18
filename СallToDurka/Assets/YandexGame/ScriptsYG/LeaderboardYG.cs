@@ -1,10 +1,9 @@
-﻿using System;
-using UnityEngine.Events;
+﻿using RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Runtime;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
-using UnityToolbag;
 
-namespace YG
+namespace RimuruDev.YandexGame.ScriptsYG
 {
     public class LeaderboardYG : MonoBehaviour
     {

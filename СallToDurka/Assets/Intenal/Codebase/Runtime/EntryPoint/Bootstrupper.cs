@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using YG;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 {
@@ -9,7 +8,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
     public sealed class Bootstrupper : MonoBehaviour
     {
         [Header("Dependency's"), SerializeField]
-        private YandexGame yandexSDK;
+        private YandexGame.ScriptsYG.YandexGame yandexSDK;
 
         [Header("Setting's"), SerializeField] private GeneralGameSettings generalGameSettings;
         [Header("Data's"), SerializeField] private List<CharacterData> characterDatas;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NaughtyAttributes
+namespace Plugins.NaughtyAttributes.Scripts.Core.ValidatorAttributes
 {
     public class ValidatorAttribute : Attribute, INaughtyAttribute
     {

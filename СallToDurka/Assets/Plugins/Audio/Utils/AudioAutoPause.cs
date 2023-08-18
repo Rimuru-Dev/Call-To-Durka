@@ -1,7 +1,7 @@
-﻿using Plugins.Audio.Core;
+﻿using RimuruDev.Plugins.Audio.Core;
 using UnityEngine;
 
-namespace Plugins.Audio.Utils
+namespace RimuruDev.Plugins.Audio.Utils
 {
     public class AudioAutoPause : MonoBehaviour
     {

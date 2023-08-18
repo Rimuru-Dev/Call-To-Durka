@@ -1,9 +1,9 @@
+using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
-using System;
 
-namespace YG
+namespace RimuruDev.YandexGame.ScriptsYG
 {
     public class GraphicSettingsYG : MonoBehaviour
     {

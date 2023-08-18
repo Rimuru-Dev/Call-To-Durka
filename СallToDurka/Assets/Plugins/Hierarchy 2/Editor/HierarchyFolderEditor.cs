@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+using Plugins.Hierarchy_2.Runtime;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEditor;
-using UnityEditor.UIElements;
 
-namespace Hierarchy2
+namespace Plugins.Hierarchy_2.Editor
 {
     [CustomEditor(typeof(HierarchyFolder))]
-    internal class HierarchyFolderEditor : Editor
+    internal class HierarchyFolderEditor : UnityEditor.Editor
     {
         private void OnEnable()
         {

@@ -3,19 +3,19 @@
 
 #if true // MODULE_MARKER
 
-using System;
 using System.Globalization;
-using UnityEngine;
-using UnityEngine.UI;
+using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Core.Enums;
 using DG.Tweening.Plugins;
 using DG.Tweening.Plugins.Options;
+using UnityEngine;
+using UnityEngine.UI;
 using Outline = UnityEngine.UI.Outline;
 using Text = UnityEngine.UI.Text;
 
 #pragma warning disable 1591
-namespace DG.Tweening
+namespace Plugins.Demigiant.DOTween.Modules
 {
 	public static class DOTweenModuleUI
     {
@@ -28,7 +28,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<float, float, FloatOptions> DOFade(this CanvasGroup target, float endValue, float duration)
         {
-            TweenerCore<float, float, FloatOptions> t = DOTween.To(() => target.alpha, x => target.alpha = x, endValue, duration);
+            TweenerCore<float, float, FloatOptions> t = DG.Tweening.DOTween.To(() => target.alpha, x => target.alpha = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -42,7 +42,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOColor(this Graphic target, Color endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.To(() => target.color, x => target.color = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.To(() => target.color, x => target.color = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -52,7 +52,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOFade(this Graphic target, float endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.ToAlpha(() => target.color, x => target.color = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.ToAlpha(() => target.color, x => target.color = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -66,7 +66,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOColor(this Image target, Color endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.To(() => target.color, x => target.color = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.To(() => target.color, x => target.color = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -76,7 +76,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOFade(this Image target, float endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.ToAlpha(() => target.color, x => target.color = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.ToAlpha(() => target.color, x => target.color = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -88,7 +88,7 @@ namespace DG.Tweening
         {
             if (endValue > 1) endValue = 1;
             else if (endValue < 0) endValue = 0;
-            TweenerCore<float, float, FloatOptions> t = DOTween.To(() => target.fillAmount, x => target.fillAmount = x, endValue, duration);
+            TweenerCore<float, float, FloatOptions> t = DG.Tweening.DOTween.To(() => target.fillAmount, x => target.fillAmount = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -99,7 +99,7 @@ namespace DG.Tweening
         /// <param name="gradient">The gradient to use</param><param name="duration">The duration of the tween</param>
         public static Sequence DOGradientColor(this Image target, Gradient gradient, float duration)
         {
-            Sequence s = DOTween.Sequence();
+            Sequence s = DG.Tweening.DOTween.Sequence();
             GradientColorKey[] colors = gradient.colorKeys;
             int len = colors.Length;
             for (int i = 0; i < len; ++i) {
@@ -127,7 +127,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOFlexibleSize(this LayoutElement target, Vector2 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => new Vector2(target.flexibleWidth, target.flexibleHeight), x => {
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => new Vector2(target.flexibleWidth, target.flexibleHeight), x => {
                     target.flexibleWidth = x.x;
                     target.flexibleHeight = x.y;
                 }, endValue, duration);
@@ -141,7 +141,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOMinSize(this LayoutElement target, Vector2 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => new Vector2(target.minWidth, target.minHeight), x => {
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => new Vector2(target.minWidth, target.minHeight), x => {
                 target.minWidth = x.x;
                 target.minHeight = x.y;
             }, endValue, duration);
@@ -155,7 +155,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOPreferredSize(this LayoutElement target, Vector2 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => new Vector2(target.preferredWidth, target.preferredHeight), x => {
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => new Vector2(target.preferredWidth, target.preferredHeight), x => {
                 target.preferredWidth = x.x;
                 target.preferredHeight = x.y;
             }, endValue, duration);
@@ -172,7 +172,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOColor(this Outline target, Color endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.To(() => target.effectColor, x => target.effectColor = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.To(() => target.effectColor, x => target.effectColor = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -182,7 +182,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOFade(this Outline target, float endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.ToAlpha(() => target.effectColor, x => target.effectColor = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.ToAlpha(() => target.effectColor, x => target.effectColor = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -192,7 +192,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOScale(this Outline target, Vector2 endValue, float duration)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.effectDistance, x => target.effectDistance = x, endValue, duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.effectDistance, x => target.effectDistance = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -207,7 +207,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOAnchorPos(this RectTransform target, Vector2 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, endValue, duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, endValue, duration);
             t.SetOptions(snapping).SetTarget(target);
             return t;
         }
@@ -217,7 +217,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOAnchorPosX(this RectTransform target, float endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(endValue, 0), duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(endValue, 0), duration);
             t.SetOptions(AxisConstraint.X, snapping).SetTarget(target);
             return t;
         }
@@ -227,7 +227,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOAnchorPosY(this RectTransform target, float endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(0, endValue), duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(0, endValue), duration);
             t.SetOptions(AxisConstraint.Y, snapping).SetTarget(target);
             return t;
         }
@@ -238,7 +238,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector3, Vector3, VectorOptions> DOAnchorPos3D(this RectTransform target, Vector3 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector3, Vector3, VectorOptions> t = DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, endValue, duration);
+            TweenerCore<Vector3, Vector3, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, endValue, duration);
             t.SetOptions(snapping).SetTarget(target);
             return t;
         }
@@ -248,7 +248,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector3, Vector3, VectorOptions> DOAnchorPos3DX(this RectTransform target, float endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector3, Vector3, VectorOptions> t = DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, new Vector3(endValue, 0, 0), duration);
+            TweenerCore<Vector3, Vector3, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, new Vector3(endValue, 0, 0), duration);
             t.SetOptions(AxisConstraint.X, snapping).SetTarget(target);
             return t;
         }
@@ -258,7 +258,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector3, Vector3, VectorOptions> DOAnchorPos3DY(this RectTransform target, float endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector3, Vector3, VectorOptions> t = DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, new Vector3(0, endValue, 0), duration);
+            TweenerCore<Vector3, Vector3, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, new Vector3(0, endValue, 0), duration);
             t.SetOptions(AxisConstraint.Y, snapping).SetTarget(target);
             return t;
         }
@@ -268,7 +268,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector3, Vector3, VectorOptions> DOAnchorPos3DZ(this RectTransform target, float endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector3, Vector3, VectorOptions> t = DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, new Vector3(0, 0, endValue), duration);
+            TweenerCore<Vector3, Vector3, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchoredPosition3D, x => target.anchoredPosition3D = x, new Vector3(0, 0, endValue), duration);
             t.SetOptions(AxisConstraint.Z, snapping).SetTarget(target);
             return t;
         }
@@ -279,7 +279,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOAnchorMax(this RectTransform target, Vector2 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.anchorMax, x => target.anchorMax = x, endValue, duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchorMax, x => target.anchorMax = x, endValue, duration);
             t.SetOptions(snapping).SetTarget(target);
             return t;
         }
@@ -290,7 +290,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOAnchorMin(this RectTransform target, Vector2 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.anchorMin, x => target.anchorMin = x, endValue, duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.anchorMin, x => target.anchorMin = x, endValue, duration);
             t.SetOptions(snapping).SetTarget(target);
             return t;
         }
@@ -300,7 +300,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOPivot(this RectTransform target, Vector2 endValue, float duration)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.pivot, x => target.pivot = x, endValue, duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.pivot, x => target.pivot = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -309,7 +309,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOPivotX(this RectTransform target, float endValue, float duration)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.pivot, x => target.pivot = x, new Vector2(endValue, 0), duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.pivot, x => target.pivot = x, new Vector2(endValue, 0), duration);
             t.SetOptions(AxisConstraint.X).SetTarget(target);
             return t;
         }
@@ -318,7 +318,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOPivotY(this RectTransform target, float endValue, float duration)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.pivot, x => target.pivot = x, new Vector2(0, endValue), duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.pivot, x => target.pivot = x, new Vector2(0, endValue), duration);
             t.SetOptions(AxisConstraint.Y).SetTarget(target);
             return t;
         }
@@ -329,7 +329,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<Vector2, Vector2, VectorOptions> DOSizeDelta(this RectTransform target, Vector2 endValue, float duration, bool snapping = false)
         {
-            TweenerCore<Vector2, Vector2, VectorOptions> t = DOTween.To(() => target.sizeDelta, x => target.sizeDelta = x, endValue, duration);
+            TweenerCore<Vector2, Vector2, VectorOptions> t = DG.Tweening.DOTween.To(() => target.sizeDelta, x => target.sizeDelta = x, endValue, duration);
             t.SetOptions(snapping).SetTarget(target);
             return t;
         }
@@ -346,7 +346,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static Tweener DOPunchAnchorPos(this RectTransform target, Vector2 punch, float duration, int vibrato = 10, float elasticity = 1, bool snapping = false)
         {
-            return DOTween.Punch(() => target.anchoredPosition, x => target.anchoredPosition = x, punch, duration, vibrato, elasticity)
+            return DG.Tweening.DOTween.Punch(() => target.anchoredPosition, x => target.anchoredPosition = x, punch, duration, vibrato, elasticity)
                 .SetTarget(target).SetOptions(snapping);
         }
 
@@ -362,7 +362,7 @@ namespace DG.Tweening
         /// <param name="randomnessMode">Randomness mode</param>
         public static Tweener DOShakeAnchorPos(this RectTransform target, float duration, float strength = 100, int vibrato = 10, float randomness = 90, bool snapping = false, bool fadeOut = true, ShakeRandomnessMode randomnessMode = ShakeRandomnessMode.Full)
         {
-            return DOTween.Shake(() => target.anchoredPosition, x => target.anchoredPosition = x, duration, strength, vibrato, randomness, true, fadeOut, randomnessMode)
+            return DG.Tweening.DOTween.Shake(() => target.anchoredPosition, x => target.anchoredPosition = x, duration, strength, vibrato, randomness, true, fadeOut, randomnessMode)
                 .SetTarget(target).SetSpecialStartupMode(SpecialStartupMode.SetShake).SetOptions(snapping);
         }
         /// <summary>Shakes a RectTransform's anchoredPosition with the given values.
@@ -377,7 +377,7 @@ namespace DG.Tweening
         /// <param name="randomnessMode">Randomness mode</param>
         public static Tweener DOShakeAnchorPos(this RectTransform target, float duration, Vector2 strength, int vibrato = 10, float randomness = 90, bool snapping = false, bool fadeOut = true, ShakeRandomnessMode randomnessMode = ShakeRandomnessMode.Full)
         {
-            return DOTween.Shake(() => target.anchoredPosition, x => target.anchoredPosition = x, duration, strength, vibrato, randomness, fadeOut, randomnessMode)
+            return DG.Tweening.DOTween.Shake(() => target.anchoredPosition, x => target.anchoredPosition = x, duration, strength, vibrato, randomness, fadeOut, randomnessMode)
                 .SetTarget(target).SetSpecialStartupMode(SpecialStartupMode.SetShake).SetOptions(snapping);
         }
 
@@ -400,15 +400,15 @@ namespace DG.Tweening
 
             // Separate Y Tween so we can elaborate elapsedPercentage on that insted of on the Sequence
             // (in case users add a delay or other elements to the Sequence)
-            Sequence s = DOTween.Sequence();
-            Tween yTween = DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(0, jumpPower), duration / (numJumps * 2))
+            Sequence s = DG.Tweening.DOTween.Sequence();
+            Tween yTween = DG.Tweening.DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(0, jumpPower), duration / (numJumps * 2))
                 .SetOptions(AxisConstraint.Y, snapping).SetEase(Ease.OutQuad).SetRelative()
                 .SetLoops(numJumps * 2, LoopType.Yoyo)
                 .OnStart(()=> startPosY = target.anchoredPosition.y);
-            s.Append(DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(endValue.x, 0), duration)
+            s.Append(DG.Tweening.DOTween.To(() => target.anchoredPosition, x => target.anchoredPosition = x, new Vector2(endValue.x, 0), duration)
                     .SetOptions(AxisConstraint.X, snapping).SetEase(Ease.Linear)
                 ).Join(yTween)
-                .SetTarget(target).SetEase(DOTween.defaultEaseType);
+                .SetTarget(target).SetEase(DG.Tweening.DOTween.defaultEaseType);
             s.OnUpdate(() => {
                 if (!offsetYSet) {
                     offsetYSet = true;
@@ -433,7 +433,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static Tweener DONormalizedPos(this ScrollRect target, Vector2 endValue, float duration, bool snapping = false)
         {
-            return DOTween.To(() => new Vector2(target.horizontalNormalizedPosition, target.verticalNormalizedPosition),
+            return DG.Tweening.DOTween.To(() => new Vector2(target.horizontalNormalizedPosition, target.verticalNormalizedPosition),
                 x => {
                     target.horizontalNormalizedPosition = x.x;
                     target.verticalNormalizedPosition = x.y;
@@ -446,7 +446,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static Tweener DOHorizontalNormalizedPos(this ScrollRect target, float endValue, float duration, bool snapping = false)
         {
-            return DOTween.To(() => target.horizontalNormalizedPosition, x => target.horizontalNormalizedPosition = x, endValue, duration)
+            return DG.Tweening.DOTween.To(() => target.horizontalNormalizedPosition, x => target.horizontalNormalizedPosition = x, endValue, duration)
                 .SetOptions(snapping).SetTarget(target);
         }
         /// <summary>Tweens a ScrollRect's verticalNormalizedPosition to the given value.
@@ -455,7 +455,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static Tweener DOVerticalNormalizedPos(this ScrollRect target, float endValue, float duration, bool snapping = false)
         {
-            return DOTween.To(() => target.verticalNormalizedPosition, x => target.verticalNormalizedPosition = x, endValue, duration)
+            return DG.Tweening.DOTween.To(() => target.verticalNormalizedPosition, x => target.verticalNormalizedPosition = x, endValue, duration)
                 .SetOptions(snapping).SetTarget(target);
         }
 
@@ -469,7 +469,7 @@ namespace DG.Tweening
         /// <param name="snapping">If TRUE the tween will smoothly snap all values to integers</param>
         public static TweenerCore<float, float, FloatOptions> DOValue(this Slider target, float endValue, float duration, bool snapping = false)
         {
-            TweenerCore<float, float, FloatOptions> t = DOTween.To(() => target.value, x => target.value = x, endValue, duration);
+            TweenerCore<float, float, FloatOptions> t = DG.Tweening.DOTween.To(() => target.value, x => target.value = x, endValue, duration);
             t.SetOptions(snapping).SetTarget(target);
             return t;
         }
@@ -483,7 +483,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOColor(this Text target, Color endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.To(() => target.color, x => target.color = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.To(() => target.color, x => target.color = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -501,7 +501,7 @@ namespace DG.Tweening
         ){
             int v = fromValue;
             CultureInfo cInfo = !addThousandsSeparator ? null : culture ?? CultureInfo.InvariantCulture;
-            TweenerCore<int, int, NoOptions> t = DOTween.To(() => v, x => {
+            TweenerCore<int, int, NoOptions> t = DG.Tweening.DOTween.To(() => v, x => {
                 v = x;
                 target.text = addThousandsSeparator
                     ? v.ToString("N0", cInfo)
@@ -516,7 +516,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Color, Color, ColorOptions> DOFade(this Text target, float endValue, float duration)
         {
-            TweenerCore<Color, Color, ColorOptions> t = DOTween.ToAlpha(() => target.color, x => target.color = x, endValue, duration);
+            TweenerCore<Color, Color, ColorOptions> t = DG.Tweening.DOTween.ToAlpha(() => target.color, x => target.color = x, endValue, duration);
             t.SetTarget(target);
             return t;
         }
@@ -536,7 +536,7 @@ namespace DG.Tweening
                 if (Debugger.logPriority > 0) Debugger.LogWarning("You can't pass a NULL string to DOText: an empty string will be used instead to avoid errors");
                 endValue = "";
             }
-            TweenerCore<string, string, StringOptions> t = DOTween.To(() => target.text, x => target.text = x, endValue, duration);
+            TweenerCore<string, string, StringOptions> t = DG.Tweening.DOTween.To(() => target.text, x => target.text = x, endValue, duration);
             t.SetOptions(richTextEnabled, scrambleMode, scrambleChars)
                 .SetTarget(target);
             return t;
@@ -557,7 +557,7 @@ namespace DG.Tweening
         {
             endValue = endValue - target.color;
             Color to = new Color(0, 0, 0, 0);
-            return DOTween.To(() => to, x => {
+            return DG.Tweening.DOTween.To(() => to, x => {
                 Color diff = x - to;
                 to = x;
                 target.color += diff;
@@ -578,7 +578,7 @@ namespace DG.Tweening
         {
             endValue = endValue - target.color;
             Color to = new Color(0, 0, 0, 0);
-            return DOTween.To(() => to, x => {
+            return DG.Tweening.DOTween.To(() => to, x => {
                 Color diff = x - to;
                 to = x;
                 target.color += diff;
@@ -599,7 +599,7 @@ namespace DG.Tweening
         {
             endValue = endValue - target.color;
             Color to = new Color(0, 0, 0, 0);
-            return DOTween.To(() => to, x => {
+            return DG.Tweening.DOTween.To(() => to, x => {
                 Color diff = x - to;
                 to = x;
                 target.color += diff;
@@ -625,7 +625,7 @@ namespace DG.Tweening
             this RectTransform target, Vector2 center, float endValueDegrees, float duration, bool relativeCenter = false, bool snapping = false
         )
         {
-            TweenerCore<Vector2, Vector2, CircleOptions> t = DOTween.To(
+            TweenerCore<Vector2, Vector2, CircleOptions> t = DG.Tweening.DOTween.To(
                 CirclePlugin.Get(), () => target.anchoredPosition, x => target.anchoredPosition = x, center, duration
             );
             t.SetOptions(endValueDegrees, relativeCenter, snapping).SetTarget(target);

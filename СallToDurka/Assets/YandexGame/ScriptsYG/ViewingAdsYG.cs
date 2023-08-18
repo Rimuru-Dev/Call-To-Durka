@@ -1,9 +1,9 @@
 ﻿using System;
+using RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Runtime;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityToolbag;
 
-namespace YG
+namespace RimuruDev.YandexGame.ScriptsYG
 {
     public class ViewingAdsYG : MonoBehaviour
     {

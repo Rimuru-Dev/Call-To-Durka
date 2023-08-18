@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using Plugins.NaughtyAttributes.Scripts.Core.ValidatorAttributes;
+using Plugins.NaughtyAttributes.Scripts.Editor.Utility;
 using UnityEditor;
+using UnityEngine;
 
-namespace NaughtyAttributes.Editor
+namespace Plugins.NaughtyAttributes.Scripts.Editor.PropertyValidators
 {
     public class MaxValuePropertyValidator : PropertyValidatorBase
     {

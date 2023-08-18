@@ -1,8 +1,8 @@
-using Plugins.Audio.Core;
-using Plugins.Audio.Utils;
+using RimuruDev.Plugins.Audio.Core;
+using RimuruDev.Plugins.Audio.Utils;
 using UnityEngine;
 
-namespace Plugins.Audio.Examples
+namespace RimuruDev.Plugins.Audio.Examples
 {
     public class AudioTest : MonoBehaviour
     {

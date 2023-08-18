@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using AOT;
 using UnityEngine;
 
-namespace Plugins.Audio.Core
+namespace RimuruDev.Plugins.Audio.Core
 {
     public static class AppFocusHandle
     {

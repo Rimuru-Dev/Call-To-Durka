@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Plugins.Audio.Core
+namespace RimuruDev.Plugins.Audio.Core
 {
     [CreateAssetMenu(fileName = "Audio Database", menuName = "Audio/Database")]
     public class AudioDatabase : ScriptableObject

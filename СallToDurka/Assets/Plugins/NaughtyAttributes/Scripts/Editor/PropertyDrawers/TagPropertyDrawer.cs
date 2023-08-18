@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Plugins.NaughtyAttributes.Scripts.Core.DrawerAttributes;
 using UnityEditor;
 using UnityEngine;
 
-namespace NaughtyAttributes.Editor
+namespace Plugins.NaughtyAttributes.Scripts.Editor.PropertyDrawers
 {
     [CustomPropertyDrawer(typeof(TagAttribute))]
     public class TagPropertyDrawer : PropertyDrawerBase

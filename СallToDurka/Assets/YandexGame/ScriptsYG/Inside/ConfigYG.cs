@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace YG.Insides
+namespace RimuruDev.YandexGame.ScriptsYG.Inside
 {
     public class ConfigYG : MonoBehaviour
     {
@@ -13,21 +13,21 @@ namespace YG.Insides
             GameObject ygPrefab = (GameObject)AssetDatabase.LoadAssetAtPath(patchYGPrefab, typeof(GameObject));
             if (ygPrefab == null)
             {
-                Debug.LogError($"Префаб YandexGame не был найден по пути: {patchYGPrefab}");
+                Debug.LogError($"пїЅпїЅпїЅпїЅпїЅпїЅ YandexGame пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ: {patchYGPrefab}");
                 return null;
             }
 
             YandexGame ygScr = ygPrefab.GetComponent<YandexGame>();
             if (ygScr == null)
             {
-                Debug.LogError($"На объекте YandexGame не был найден компонент YandexGame! Префаб объекта расположен по пути: {patchYGPrefab}");
+                Debug.LogError($"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ YandexGame пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ YandexGame! пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ: {patchYGPrefab}");
                 return null;
             }
 
             InfoYG infoYG = ygScr.infoYG;
             if (ygScr == null)
             {
-                Debug.LogError($"На компоненте YandexGame не определено поле InfoYG! Префаб YandexGame расположен по пути: {patchYGPrefab}");
+                Debug.LogError($"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ YandexGame пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ InfoYG! пїЅпїЅпїЅпїЅпїЅпїЅ YandexGame пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ: {patchYGPrefab}");
                 return null;
             }
 

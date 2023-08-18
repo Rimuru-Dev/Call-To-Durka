@@ -1,10 +1,9 @@
-#if UNITY_EDITOR
-using UnityEngine;
-#endif
-using System.Collections.Generic;
-using YG.Insides;
 
-namespace YG
+using System.Collections.Generic;
+using RimuruDev.YandexGame.ScriptsYG.Inside;
+using UnityEngine;
+
+namespace RimuruDev.YandexGame.ScriptsYG.YandexMetrica
 {
     public static class YandexMetrica
     {

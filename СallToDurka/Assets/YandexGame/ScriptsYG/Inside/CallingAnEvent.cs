@@ -1,8 +1,8 @@
 #if UNITY_EDITOR
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
-namespace YG.Insides
+namespace RimuruDev.YandexGame.ScriptsYG.Inside
 {
     public class CallingAnEvent : MonoBehaviour
     {

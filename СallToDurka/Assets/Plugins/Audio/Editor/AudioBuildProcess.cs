@@ -1,12 +1,12 @@
 ﻿using System;
-using Plugins.Audio.Core;
+using RimuruDev.Plugins.Audio.Core;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
-using AudioConfiguration = Plugins.Audio.Core.AudioConfiguration;
+using AudioConfiguration = RimuruDev.Plugins.Audio.Core.AudioConfiguration;
 using Directory = UnityEngine.Windows.Directory;
 
-namespace Plugins.Audio.Editor
+namespace RimuruDev.Plugins.Audio.Editor
 {
     public class AudioBuildProcess
     {
