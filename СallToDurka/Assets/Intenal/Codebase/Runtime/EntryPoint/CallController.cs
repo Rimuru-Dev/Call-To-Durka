@@ -35,13 +35,14 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         public void PickUpPhone(int callID)
         {
             Debug.Log($"PickUpPhone: {callID}");
-            SetActivePanelState(isActive: false);
+            // SetActivePanelState(isActive: false);
+            callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
         }
 
         public void HangUpPhone(int callID)
         {
             Debug.Log($"HangUpPhone: {callID}");
-            SetActivePanelState(isActive: false);
+            CloseCallPanel(callID);
         }
 
         private void OpenCallPanel(int callID)
@@ -62,7 +63,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
             SetActivePanelState(isActive: false);
 
-            // callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
+            callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
             // callPanel.hangUpPhoneButton.onClick.RemoveAllListeners();
         }
 
