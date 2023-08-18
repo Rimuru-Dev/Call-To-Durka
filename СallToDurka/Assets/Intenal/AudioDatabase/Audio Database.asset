@@ -12,4 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4645132edefd4c74968a0c941a98fb89, type: 3}
   m_Name: Audio Database
   m_EditorClassIdentifier: 
-  _items: []
+  _items:
+  - Clip: {fileID: 8300000, guid: 26e496547fd02a544bc4fb31daeb47e1, type: 3}
+    Key: Deadpool
+    FolderPath: Intenal\[Common]\AudioClips\
+    Name: Deadpool.mp3
+    Preload: 1
+    _id: 849ef66d-df74-4601-a799-def9ddf9512e
+  - Clip: {fileID: 8300000, guid: 5676db5dfc4672349b936b5143e62dfe, type: 3}
+    Key: IPHONE
+    FolderPath: Intenal\[Common]\AudioClips\
+    Name: IPHONE.mp3
+    Preload: 1
+    _id: bd7bc1c6-2e14-4e84-9531-29cde8281861
+  - Clip: {fileID: 8300000, guid: 147d3d66c3e21af499bdbd8e0bf85c9c, type: 3}
+    Key: MEOW
+    FolderPath: Intenal\[Common]\AudioClips\
+    Name: MEOW.mp3
+    Preload: 1
+    _id: 9e12c275-ffd5-455f-a52b-cab75e1765da
+  - Clip: {fileID: 8300000, guid: a57b2be4ac137c2498bf1abd2e23db43, type: 3}
+    Key: SAO
+    FolderPath: Intenal\[Common]\AudioClips\
+    Name: SAO.mp3
+    Preload: 1
+    _id: c2b691b0-a950-48ea-afb0-1e30d36a879c
