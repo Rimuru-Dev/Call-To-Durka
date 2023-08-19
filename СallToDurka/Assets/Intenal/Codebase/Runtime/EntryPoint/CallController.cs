@@ -27,14 +27,14 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
         public void StartCall(int callID)
         {
-            Debug.Log($"StartCall: {callID}");
+           // Debug.Log($"StartCall: {callID}");
 
             OpenCallPanel(callID);
         }
 
         public void PickUpPhone()
         {
-            Debug.Log($"PickUpPhone:");
+         //   Debug.Log($"PickUpPhone:");
 
             // Audio
             {
