@@ -66,6 +66,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             SetActivePanelState(isActive: true);
 
             callPanel.callCharacter.sprite = characterDatas.First(character => character.ID == currentCharacter).Sprite;
+            callPanel.characterName.text = characterDatas.First(character => character.ID == currentCharacter).Name;
             generalGameSettings.SourceAudio.Play(generalGameSettings.SourceAudioKey);
             generalGameSettings.SourceAudio.Loop = true;
         }
