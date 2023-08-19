@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using RimuruDev.Plugins.Audio.Core;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 {
-    [Serializable]
-    public sealed class CallController
+    public sealed class CallController : MonoBehaviour
     {
-        private readonly CallViewController callViewController;
-        private readonly CallPanel callPanel;
-        private readonly GeneralGameSettings generalGameSettings;
-        private readonly List<CharacterData> characterDatas;
+        private  CallViewController callViewController;
+        private  CallPanel callPanel;
+        private  GeneralGameSettings generalGameSettings;
+        private  List<CharacterData> characterDatas;
 
-        public CallController(
+        public void Init(
             CallViewController callViewController,
             CallPanel callPanel,
             GeneralGameSettings generalGameSettings,
@@ -27,14 +28,14 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
         public void StartCall(int callID)
         {
-           // Debug.Log($"StartCall: {callID}");
+            // Debug.Log($"StartCall: {callID}");
 
             OpenCallPanel(callID);
         }
 
         public void PickUpPhone()
         {
-         //   Debug.Log($"PickUpPhone:");
+            //   Debug.Log($"PickUpPhone:");
 
             // Audio
             {
@@ -53,7 +54,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         {
             generalGameSettings.SourceAudio.Stop();
             generalGameSettings.SourceAudio.Loop = false;
-            
+
             CloseCallPanel();
         }
 
@@ -70,6 +71,23 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             generalGameSettings.SourceAudio.Play(generalGameSettings.SourceAudioKey);
             generalGameSettings.SourceAudio.Loop = true;
         }
+#if UNITY_EDITOR
+        [System.Diagnostics.Conditional("DEBUG")]
+        private void OnValidate()
+        {
+            sourceAudios = new List<SourceAudio>();
+            audioSources = new List<AudioSource>();
+
+            foreach (var sourceAudio in UnityEngine.Object.FindObjectsOfType<SourceAudio>())
+                sourceAudios.Add(sourceAudio);
+
+            foreach (var audioSource in UnityEngine.Object.FindObjectsOfType<AudioSource>())
+                audioSources.Add(audioSource);
+        }
+#endif
+
+        [SerializeField] private List<SourceAudio> sourceAudios;
+        [SerializeField] private List<AudioSource> audioSources;
 
         private void CloseCallPanel()
         {
@@ -83,6 +101,19 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
                 generalGameSettings.SourceAudio.Loop = false;
                 generalGameSettings.SourceAudio.Stop();
             }
+
+            foreach (var sourceAudio in sourceAudios.Where(x => x != null))
+            {
+                sourceAudio.Stop();
+                sourceAudio.Loop = false;
+            }
+
+            foreach (var audioSource in audioSources.Where(x => x != null))
+            {
+                audioSource.Stop();
+                audioSource.loop = false;
+            }
+
             callPanel.pickUpPhoneButton.gameObject.SetActive(true);
             callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
 

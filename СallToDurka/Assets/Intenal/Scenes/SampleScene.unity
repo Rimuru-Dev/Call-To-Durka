@@ -1797,6 +1797,7 @@ MonoBehaviour:
     <AudioClip>k__BackingField: {fileID: 1884016726}
   callViewController: {fileID: 2084309884}
   callPanel: {fileID: 1790103053}
+  callController: {fileID: 2084309885}
 --- !u!1 &929084863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2180,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ebed5a63174e8fb3ad955bfcef2020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sourceAudios:
+  - {fileID: 374964782}
+  - {fileID: 767374260}
+  - {fileID: 1239019680}
+  - {fileID: 1433951823}
+  - {fileID: 1884016726}
 --- !u!1 &1239019678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,6 +3750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2084309883}
   - component: {fileID: 2084309884}
+  - component: {fileID: 2084309885}
   m_Layer: 0
   m_Name: CallViewController
   m_TagString: Untagged
@@ -3777,6 +3785,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e737837e7584ae382502fb5daf59de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2084309885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084309882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887909f6c5a743a9a9bf17d5559da6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceAudios:
+  - {fileID: 374964782}
+  - {fileID: 767374260}
+  - {fileID: 1239019680}
+  - {fileID: 1433951823}
+  - {fileID: 1884016726}
+  audioSources:
+  - {fileID: 374964783}
+  - {fileID: 767374261}
+  - {fileID: 1239019681}
+  - {fileID: 1433951824}
+  - {fileID: 1884016727}
 --- !u!1001 &2030490833094806050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3900,67 +3932,19 @@ MonoBehaviour:
       m_Calls: []
   OpenFullscreenAd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 348431372}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   CloseFullscreenAd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 348431372}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   ErrorFullscreenAd:
     m_PersistentCalls:
       m_Calls: []
   OpenVideoAd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 348431372}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   CloseVideoAd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 348431372}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   RewardVideoAd:
     m_PersistentCalls:
       m_Calls: []
@@ -4039,34 +4023,10 @@ MonoBehaviour:
   customEvents:
     OpenAd:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 348431372}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     CloseAd:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 348431372}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
 --- !u!1001 &3575500975696963302
 PrefabInstance:
   m_ObjectHideFlags: 0

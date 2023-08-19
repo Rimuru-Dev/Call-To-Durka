@@ -17,10 +17,10 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
         [Header("View's"), SerializeField] private CallViewController callViewController;
         [SerializeField] private CallPanel callPanel;
-        private CallController callController;
+        [SerializeField] private CallController callController;
 
         private void Awake() =>
-            callController = new CallController(callViewController, callPanel, generalGameSettings, characterDatas);
+            callController.Init(callViewController, callPanel, generalGameSettings, characterDatas);
 
         private void Start() =>
             callViewController.Initialize(callController);

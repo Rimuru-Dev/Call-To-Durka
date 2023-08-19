@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using RimuruDev.Plugins.Audio.Core;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
@@ -22,7 +23,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 #if UNITY_EDITOR
             print("AudioClipEnableHelper - OnDisable");
 #endif
-            foreach (var sourceAudio in sourceAudios)
+            foreach (var sourceAudio in sourceAudios.Where(x => x != null))
             {
                 sourceAudio.Stop();
                 sourceAudio.Loop = false;
