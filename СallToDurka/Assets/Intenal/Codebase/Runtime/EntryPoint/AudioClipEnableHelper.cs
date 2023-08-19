@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using RimuruDev.Plugins.Audio.Core;
+using UnityEngine;
 
 // using System.Collections.Generic;
 // using System.Linq;
@@ -10,6 +11,8 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
     [DisallowMultipleComponent]
     public sealed class AudioClipEnableHelper : MonoBehaviour
     {
+        public GameObject audioComponent;
+
 //         [SerializeField] private List<SourceAudio> sourceAudios;
 //
 //         private void OnEnable()
@@ -19,17 +22,28 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 // #endif
 //         }
 //
-//         private void OnDisable()
-//         {
+        private void OnDisable()
+        {
+            audioComponent.SetActive(false);
+            print("AudioClipEnableHelper - OnDisable");
+
+            foreach (var audioSource in FindObjectsOfType<AudioSource>(true))
+                audioSource.Stop();
+
+            foreach (var sourceAudio in FindObjectsOfType<SourceAudio>(true))
+                sourceAudio.Stop();
+
+            audioComponent.SetActive(true);
+
 // #if UNITY_EDITOR
-//             print("AudioClipEnableHelper - OnDisable");
+//             
 // #endif
 //             foreach (var sourceAudio in sourceAudios.Where(x => x != null))
 //             {
 //                 sourceAudio.Stop();
 //                 sourceAudio.Loop = false;
 //             }
-//         }
+        }
 //
 // #if UNITY_EDITOR
 //         [System.Diagnostics.Conditional("DEBUG")]

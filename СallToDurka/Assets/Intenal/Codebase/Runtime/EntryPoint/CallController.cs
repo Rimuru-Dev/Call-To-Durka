@@ -11,6 +11,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         private GeneralGameSettings generalGameSettings;
         private List<CharacterData> characterDatas;
         private int currentCharacter = -1;
+        public GameObject audioComponent;
 
         [SerializeField] private List<SourceAudio> sourceAudios;
 
@@ -71,6 +72,11 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             callPanel.pickUpPhoneButton.gameObject.SetActive(true);
             callPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
 
+
+            StopAllAudioSources();
+            
+            audioComponent.SetActive(true);
+            
             YandexGame.ScriptsYG.YandexGame.FullscreenShow();
 
             SetActivePanelState(isActive: false);
@@ -83,11 +89,13 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
         private void StopAllAudioSources()
         {
-            var audioSources = FindObjectsOfType<AudioSource>();
-            foreach (var audioSource in audioSources)
-            {
+            foreach (var audioSource in FindObjectsOfType<AudioSource>(true))
                 audioSource.Stop();
-            }
+
+            foreach (var sourceAudio in FindObjectsOfType<SourceAudio>(true))
+                sourceAudio.Stop();
+            
+            audioComponent.SetActive(false);
         }
     }
 }
