@@ -1,4 +1,7 @@
-﻿using RimuruDev.Plugins.Audio.Core;
+﻿
+// TODO: Remove this component
+
+using RimuruDev.Plugins.Audio.Core;
 using UnityEngine;
 
 // using System.Collections.Generic;

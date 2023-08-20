@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+// TODO: Remove this component
+
+using System;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.Storages
 {

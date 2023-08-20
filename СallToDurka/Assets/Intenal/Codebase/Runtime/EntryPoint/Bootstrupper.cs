@@ -1,3 +1,6 @@
+
+// TODO: Избавиться от магических числе и делегировать подписку отписку в другой класс.
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;

@@ -28,7 +28,7 @@ namespace RimuruDev.Plugins.Audio.Core
 
         public bool IsPlaying => _audioSource.isPlaying;
 
-        public AudioSource _audioSource
+        private AudioSource _audioSource
         {
             get
             {

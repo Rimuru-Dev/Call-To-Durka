@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿
+
+// TODO: Избавиться от MonoBehaviour, разделить класс.
+
+using System.Collections.Generic;
 using System.Linq;
 using RimuruDev.Plugins.Audio.Core;
 using UnityEngine;
