@@ -31,7 +31,10 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
                 audioSource.Stop();
 
             foreach (var sourceAudio in FindObjectsOfType<SourceAudio>(true))
+            {
                 sourceAudio.Stop();
+                // sourceAudio._audioSource.time = 0;
+            }
 
             audioComponent.SetActive(true);
 

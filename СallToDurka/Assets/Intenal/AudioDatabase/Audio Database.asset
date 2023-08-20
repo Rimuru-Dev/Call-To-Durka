@@ -15,31 +15,31 @@ MonoBehaviour:
   _items:
   - Clip: {fileID: 8300000, guid: 26e496547fd02a544bc4fb31daeb47e1, type: 3}
     Key: Deadpool
-    FolderPath: Intenal\[Common]\AudioClips\
+    FolderPath: Intenal\Common\AudioClips\
     Name: Deadpool.mp3
     Preload: 1
     _id: 849ef66d-df74-4601-a799-def9ddf9512e
   - Clip: {fileID: 8300000, guid: 147d3d66c3e21af499bdbd8e0bf85c9c, type: 3}
     Key: MEOW
-    FolderPath: Intenal\[Common]\AudioClips\
+    FolderPath: Intenal\Common\AudioClips\
     Name: MEOW.mp3
     Preload: 1
     _id: 9e12c275-ffd5-455f-a52b-cab75e1765da
   - Clip: {fileID: 8300000, guid: b46f65d0753fbe44488504489d2919ef, type: 3}
     Key: SHREK
-    FolderPath: Intenal\[Common]\AudioClips\
+    FolderPath: Intenal\Common\AudioClips\
     Name: SHREK.mp3
     Preload: 1
     _id: cd894a0e-b27d-4f57-9d31-dd20deaa69a9
   - Clip: {fileID: 8300000, guid: 32e94c05d622092499ec6756661af5fb, type: 3}
     Key: MILOS
-    FolderPath: Intenal\[Common]\AudioClips\
+    FolderPath: Intenal\Common\AudioClips\
     Name: MILOS.mp3
     Preload: 1
     _id: 8c2a1ef9-48bb-452e-b6f4-b99c1c1018b2
   - Clip: {fileID: 8300000, guid: 11356e6c77f9cb54f8ab7cdc86c6d6d1, type: 3}
     Key: Floppa
-    FolderPath: Intenal\[Common]\AudioClips\
+    FolderPath: Intenal\Common\AudioClips\
     Name: FLOPPA.mp3
     Preload: 1
     _id: a43e6dbd-8e72-4f81-ad10-9bd33e7ebae3

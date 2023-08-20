@@ -49,13 +49,14 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
         private void OpenCallPanel(int callID)
         {
-            currentCharacter = callID;
-
             SetActivePanelState(isActive: true);
+
+            currentCharacter = callID;
 
             callPanel.callCharacter.sprite = characterDatas.First(character => character.ID == currentCharacter).Sprite;
             callPanel.characterName.text = characterDatas.First(character => character.ID == currentCharacter).Name;
 
+            print("Play Rington");
             generalGameSettings.SourceAudio.Play(generalGameSettings.SourceAudioKey);
             generalGameSettings.SourceAudio.Loop = true;
         }
@@ -74,9 +75,9 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
 
             StopAllAudioSources();
-            
+
             audioComponent.SetActive(true);
-            
+
             YandexGame.ScriptsYG.YandexGame.FullscreenShow();
 
             SetActivePanelState(isActive: false);
@@ -93,8 +94,11 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
                 audioSource.Stop();
 
             foreach (var sourceAudio in FindObjectsOfType<SourceAudio>(true))
+            {
                 sourceAudio.Stop();
-            
+                //   sourceAudio._audioSource.time = 0;
+            }
+
             audioComponent.SetActive(false);
         }
     }

@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c896f32ca6a24109b8311345ab6aae6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loop: 0
+  Loop: 1
 --- !u!82 &374964783
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1581,7 +1581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c896f32ca6a24109b8311345ab6aae6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loop: 0
+  Loop: 1
 --- !u!82 &767374261
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c896f32ca6a24109b8311345ab6aae6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loop: 0
+  Loop: 1
 --- !u!82 &1239019681
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2728,7 +2728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c896f32ca6a24109b8311345ab6aae6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loop: 0
+  Loop: 1
 --- !u!82 &1433951824
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3355,7 +3355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c896f32ca6a24109b8311345ab6aae6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loop: 0
+  Loop: 1
 --- !u!82 &1884016727
 AudioSource:
   m_ObjectHideFlags: 0
