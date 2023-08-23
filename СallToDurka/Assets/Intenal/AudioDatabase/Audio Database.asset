@@ -43,3 +43,9 @@ MonoBehaviour:
     Name: FLOPPA.mp3
     Preload: 1
     _id: a43e6dbd-8e72-4f81-ad10-9bd33e7ebae3
+  - Clip: {fileID: 8300000, guid: af0e12145d0f2054db57b3b550537f9b, type: 3}
+    Key: F
+    FolderPath: Intenal\Common\AudioClips\
+    Name: F.mp3
+    Preload: 1
+    _id: 973552da-2226-4cd2-8764-3e5846fedf41
