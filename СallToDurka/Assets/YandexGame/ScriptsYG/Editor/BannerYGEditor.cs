@@ -1,11 +1,11 @@
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor
+namespace YG.Insides
 {
     [CustomEditor(typeof(BannerYG))]
-    public class BannerYGEditor : UnityEditor.Editor
+    public class BannerYGEditor : Editor
     {
         BannerYG scr;
         CanvasScaler scaler;
@@ -17,7 +17,7 @@ namespace RimuruDev.YandexGame.ScriptsYG.Editor
 
             scaler = scr.GetComponent<CanvasScaler>();
             if (!scaler)
-                Debug.LogError("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ CanvasScaler!");
+                Debug.LogError("Не найден компонент CanvasScaler!");
         }
 
         public override void OnInspectorGUI()

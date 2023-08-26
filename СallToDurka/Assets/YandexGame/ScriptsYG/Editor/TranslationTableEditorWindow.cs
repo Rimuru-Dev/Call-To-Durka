@@ -1,8 +1,9 @@
-﻿using System.Text.RegularExpressions;
+﻿using UnityEngine;
 using UnityEditor;
-using UnityEngine;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor
+namespace YG.Insides
 {
     public class TranslationTableEditorWindow : EditorWindow
     {

@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
 using UnityEditor;
-using UnityEngine;
+using System.Collections.Generic;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor
+namespace YG.Insides
 {
     public class CSVFileEditorWindow : EditorWindow
     {

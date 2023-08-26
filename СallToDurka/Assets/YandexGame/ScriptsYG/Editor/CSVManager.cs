@@ -1,8 +1,8 @@
-﻿using System.IO;
+﻿using UnityEngine;
 using System.Text.RegularExpressions;
-using UnityEngine;
+using System.IO;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor
+namespace YG.Insides
 {
     public class CSVManager
     {

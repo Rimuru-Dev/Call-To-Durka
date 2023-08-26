@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace RimuruDev.YandexGame.ScriptsYG.YandexMetrica
+namespace YG.Insides
 {
     public static class JsonUtils
     {

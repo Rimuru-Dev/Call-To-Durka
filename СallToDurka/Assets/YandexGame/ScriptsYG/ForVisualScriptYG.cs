@@ -1,8 +1,8 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.Events;
 
-namespace RimuruDev.YandexGame.ScriptsYG
+namespace YG
 {
     public class ForVisualScriptYG : MonoBehaviour
     {

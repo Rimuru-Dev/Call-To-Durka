@@ -1,8 +1,7 @@
 using System.IO;
 using System.IO.Compression;
-using RimuruDev.YandexGame.ScriptsYG.Inside;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor.PostProcessBuild
+namespace YG.Insides.BuildModify
 {
     public static class ArchivingBuild
     {

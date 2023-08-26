@@ -1,8 +1,8 @@
-﻿using RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Runtime;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Serialization;
+using UnityToolbag;
 
-namespace RimuruDev.YandexGame.ScriptsYG
+namespace YG
 {
     [CreateAssetMenu(fileName = "YandexGameData", menuName = "InfoYG")]
     public class InfoYG : ScriptableObject

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Inside
+namespace YG.Example
 {
     public class NewResultLeaderboard : MonoBehaviour
     {

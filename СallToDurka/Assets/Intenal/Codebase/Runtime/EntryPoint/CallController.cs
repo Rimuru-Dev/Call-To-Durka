@@ -1,11 +1,8 @@
-﻿// TODO: Избавиться от MonoBehaviour, разделить класс.
-
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using RimuruDev.Plugins.Audio.Core;
 using UnityEngine;
-using UnityEngine.UI;
+using YG;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 {
@@ -101,7 +98,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
             audioComponent.SetActive(true);
 
-            YandexGame.ScriptsYG.YandexGame.FullscreenShow();
+            YandexGame.FullscreenShow();
 
             SetActivePanelState(isActive: false);
         }

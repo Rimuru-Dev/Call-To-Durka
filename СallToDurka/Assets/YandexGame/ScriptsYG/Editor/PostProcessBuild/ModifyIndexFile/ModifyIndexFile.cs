@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor.PostProcessBuild.ModifyIndexFile
+namespace YG.Insides.BuildModify
 {
     public static partial class ModifyIndexFile
     {
@@ -12,7 +12,7 @@ namespace RimuruDev.YandexGame.ScriptsYG.Editor.PostProcessBuild.ModifyIndexFile
             string filePath = Path.Combine(buildPatch, "index.html");
             string fileText = File.ReadAllText(filePath);
 
-            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ index пїЅпїЅпїЅпїЅпїЅ:
+            // Методы модификации index файла:
             SetBakcgroundFormat(ref fileText);
             SetAdWhenLoadGameValue(ref fileText);
             SetPixelRatioMobile(ref fileText);

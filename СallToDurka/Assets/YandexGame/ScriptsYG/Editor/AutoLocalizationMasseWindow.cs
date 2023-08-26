@@ -1,9 +1,9 @@
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor
+namespace YG.Insides
 {
     public class AutoLocalizationMasse : EditorWindow
     {

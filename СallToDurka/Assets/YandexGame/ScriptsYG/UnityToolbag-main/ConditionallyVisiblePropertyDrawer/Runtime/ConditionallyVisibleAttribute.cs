@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Runtime
+namespace UnityToolbag
 {
     public sealed class ConditionallyVisibleAttribute : PropertyAttribute
     {

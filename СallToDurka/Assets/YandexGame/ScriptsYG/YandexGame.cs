@@ -1,19 +1,16 @@
 ﻿//#define JSON_NET_ENABLED
-
+using UnityEngine;
+using System.Runtime.InteropServices;
+using UnityEngine.Events;
 using System;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters.Binary;
-using RimuruDev.YandexGame.ScriptsYG.Inside;
-using RimuruDev.YandexGame.WorkingData;
-using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 #if JSON_NET_ENABLED
 using Newtonsoft.Json;
 #endif
 
-namespace RimuruDev.YandexGame.ScriptsYG
+namespace YG
 {
     public class YandexGame : MonoBehaviour
     {
@@ -463,7 +460,7 @@ namespace RimuruDev.YandexGame.ScriptsYG
             errMessage.AddComponent<GraphicRaycaster>();
             errMessage.AddComponent<RawImage>().color = new Color(0, 1, 0, 0.5f);
 
-            CallingAnEvent call = errMessage.AddComponent(typeof(CallingAnEvent)) as CallingAnEvent;
+            Insides.CallingAnEvent call = errMessage.AddComponent(typeof(Insides.CallingAnEvent)) as Insides.CallingAnEvent;
             call.StartCoroutine(call.CallingAd(infoYG.durationOfAdSimulation));
         }
 #endif
@@ -503,7 +500,7 @@ namespace RimuruDev.YandexGame.ScriptsYG
             errMessage.AddComponent<RawImage>().color = new Color(0, 0, 1, 0.5f);
             DontDestroyOnLoad(errMessage);
 
-            CallingAnEvent call = errMessage.AddComponent(typeof(CallingAnEvent)) as CallingAnEvent;
+            Insides.CallingAnEvent call = errMessage.AddComponent(typeof(Insides.CallingAnEvent)) as Insides.CallingAnEvent;
             call.StartCoroutine(call.CallingAd(infoYG.durationOfAdSimulation, id));
         }
 #endif

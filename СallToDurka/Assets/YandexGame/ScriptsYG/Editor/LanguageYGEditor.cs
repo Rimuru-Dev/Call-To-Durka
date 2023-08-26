@@ -1,12 +1,12 @@
-using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
+using UnityEditor.SceneManagement;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor
+namespace YG.Insides
 {
     [CustomEditor(typeof(LanguageYG))]
-    public class LanguageYGEditor : UnityEditor.Editor
+    public class LanguageYGEditor : Editor
     {
         LanguageYG scr;
 
@@ -40,9 +40,9 @@ namespace RimuruDev.YandexGame.ScriptsYG.Editor
                     scr.textUIComponent = scr.GetComponent<Text>();
                     scr.textMeshComponent = scr.GetComponent<TextMesh>();
                 }
-                if (GUILayout.Button("Create Text пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"))
+                if (GUILayout.Button("Create Text компонент"))
                     scr.textUIComponent = scr.gameObject.AddComponent<Text>();
-                if (GUILayout.Button("Create TextMesh пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"))
+                if (GUILayout.Button("Create TextMesh компонент"))
                     scr.textMeshComponent = scr.gameObject.AddComponent<TextMesh>();
 
                 GUILayout.Space(10);
@@ -54,7 +54,7 @@ namespace RimuruDev.YandexGame.ScriptsYG.Editor
                 {
                     scr.infoYG = scr.GetInfoYG();
                     if (scr.infoYG == null)
-                        Debug.LogError("InfoYG not found!  (ru) InfoYG пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");
+                        Debug.LogError("InfoYG not found!  (ru) InfoYG не найден!");
                 }
             }
 
@@ -302,7 +302,7 @@ namespace RimuruDev.YandexGame.ScriptsYG.Editor
                     }
                     else
                     {
-                        Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ InfoYG", scr.gameObject);
+                        Debug.LogError("The standard font is not specified! Specify it in the InfoYG plugin settings.  (ru) Не указан стандартный шрифт! Укажите его в настройках плагина InfoYG", scr.gameObject);
                     }
                 }
 

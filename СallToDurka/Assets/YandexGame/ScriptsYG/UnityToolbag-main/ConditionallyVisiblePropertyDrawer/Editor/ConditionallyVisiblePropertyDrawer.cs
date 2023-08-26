@@ -1,8 +1,7 @@
-﻿using RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Runtime;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-namespace RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Editor
+namespace UnityToolbag
 {
     [CustomPropertyDrawer(typeof(ConditionallyVisibleAttribute))]
     public class ConditionallyVisiblePropertyDrawer : PropertyDrawer

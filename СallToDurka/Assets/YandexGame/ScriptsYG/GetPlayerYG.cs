@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace RimuruDev.YandexGame.ScriptsYG
+namespace YG
 {
     public class GetPlayerYG : MonoBehaviour
     {

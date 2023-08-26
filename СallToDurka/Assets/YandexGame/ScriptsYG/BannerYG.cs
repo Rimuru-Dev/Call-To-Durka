@@ -1,21 +1,21 @@
 using System.Runtime.InteropServices;
-using RimuruDev.YandexGame.ScriptsYG.UnityToolbag_main.ConditionallyVisiblePropertyDrawer.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityToolbag;
 
-namespace RimuruDev.YandexGame.ScriptsYG 
+namespace YG 
 {
     public class BannerYG : MonoBehaviour
     {
         public enum RTBNumber { One, Two };
-        [Tooltip("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.")]
+        [Tooltip("Всего доступно два баннера. Выберите номер данного баннера.")]
         public RTBNumber RTB_Number;
         public enum Device { desktopAndMobile, onlyDesktop, onlyMobile };
-        [Tooltip(" Desktop And Mobile - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.\n Only Desktop - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.\n Only Mobile - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ).")]
+        [Tooltip(" Desktop And Mobile - Отображение баннера на всех устройствах.\n Only Desktop - Отображение баннера только на компьютере.\n Only Mobile - Отображение баннера только на мобильных устройствах (телефонах и планшетах).")]
         public Device device;
-        [Tooltip(" пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ. RBT-пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.\n X - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.\n Y - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.")]
+        [Tooltip(" Минимальный размер блока. RBT-блок не будет меньше установленного значения.\n X - минимальная ширина.\n Y - минимальная высота.")]
         public Vector2 minSize = new Vector2(20, 20);
-        [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 31пїЅпїЅпїЅ.")]
+        [Tooltip("Выполнять код каждые 31сек.")]
         public bool codeExecutionTimer31Sec;
 
         [HideInInspector]
@@ -24,7 +24,7 @@ namespace RimuruDev.YandexGame.ScriptsYG
 
 #if UNITY_EDITOR
         public enum ScaleMode { ConstantPixelSize, ScaleWithScreenSize };
-        [Tooltip("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Canvas'пїЅ!")]
+        [Tooltip("Режим масштабирования блоков.\nНастраивайте масштаб здесь, не изменяйте параметры компонентов Canvas'а!")]
         public ScaleMode UIScaleMode;
 
         [ConditionallyVisible(nameof(UIScaleMode))]
@@ -102,7 +102,7 @@ namespace RimuruDev.YandexGame.ScriptsYG
         {
             if (CheckDevice())
             {
-                // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ RTB-пїЅпїЅпїЅпїЅпїЅпїЅ
+                // Обновление RTB-блоков
                 if (codeExecutionTimer31Sec && YandexGame.SDKEnabled && focus && NoAds())
                 {
                     if (RTB_Number == RTBNumber.One)

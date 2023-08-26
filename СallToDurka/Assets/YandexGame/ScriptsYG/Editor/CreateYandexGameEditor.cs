@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace RimuruDev.YandexGame.ScriptsYG.Editor
+namespace YG.Insides
 {
     public class CreateYandexGameEditor
     {
