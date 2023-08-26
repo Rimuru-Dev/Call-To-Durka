@@ -12,6 +12,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         [field: SerializeField] public TextMeshProUGUI characterName;
         [field: SerializeField] public Image callCharacter;
         [field: SerializeField] public Button pickUpPhoneButton;
+        [field: SerializeField] public Button hangUpPhoneButton;
         [field: SerializeField] public Button[] memeCallButtons;
     }
 }

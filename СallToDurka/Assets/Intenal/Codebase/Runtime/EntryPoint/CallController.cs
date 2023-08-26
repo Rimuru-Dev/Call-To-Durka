@@ -34,18 +34,24 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
                 var id = i;
                 _memeCallPanel.memeCallButtons[i].onClick.AddListener(() => { StartCall(id); });
             }
+
+            _memeCallPanel.pickUpPhoneButton.onClick.AddListener(PickUpPhone);
+            _memeCallPanel.hangUpPhoneButton.onClick.AddListener(HangUpPhone);
         }
 
         private void OnDestroy()
         {
             foreach (var callButton in _memeCallPanel.memeCallButtons)
                 callButton.onClick.RemoveAllListeners();
+
+            _memeCallPanel.pickUpPhoneButton.onClick.RemoveListener(PickUpPhone);
+            _memeCallPanel.hangUpPhoneButton.onClick.RemoveListener(HangUpPhone);
         }
 
-        public void StartCall(int callID) =>
+        private void StartCall(int callID) =>
             OpenCallPanel(callID);
 
-        public void PickUpPhone()
+        private void PickUpPhone()
         {
             generalGameSettings.SourceAudio.Loop = false;
             generalGameSettings.SourceAudio.Stop();
@@ -57,7 +63,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             _memeCallPanel.pickUpPhoneButton.gameObject.SetActive(false);
         }
 
-        public void HangUpPhone()
+        private void HangUpPhone()
         {
             StopAllAudioSources();
 
