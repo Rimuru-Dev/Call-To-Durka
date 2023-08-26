@@ -32,3 +32,25 @@
     <img alt="" src="https://img.shields.io/github/watchers/RimuruDev/Call-To-Durka?style=flat">
   </a>
 </p>
+
+## Switch to WebGL.
+
+![image](https://github.com/RimuruDev/Call-To-Durka/assets/85500556/2004524e-265b-4a4c-bc6d-1a7dba5fc418)
+
+## The script from which the game is launched.
+
+![image](https://github.com/RimuruDev/Call-To-Durka/assets/85500556/af730961-45cf-42f3-b1e8-4b97a0be85eb)
+
+
+### If you are having problems with the sound, open the Tool->Audio Management tab. Then Database->Open-> select Audio Database.asset file on the path "Assets\Intenal\AudioDatabase".
+
+![image](https://github.com/RimuruDev/Call-To-Durka/assets/85500556/bd336a29-acb2-4597-b7a9-3dec55159e23)
+![image](https://github.com/RimuruDev/Call-To-Durka/assets/85500556/1bc81bda-448e-44ae-8de3-e5ecd6f7b686)
+![image](https://github.com/RimuruDev/Call-To-Durka/assets/85500556/fae9645f-ab50-4a02-aeb8-56d2881c439d)
+
+### Result:
+
+![image](https://github.com/RimuruDev/Call-To-Durka/assets/85500556/67f8cabf-56f0-4164-ac2d-95876b031e95)
+
+
+
