@@ -1,5 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Diagnostics.CodeAnalysis;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 {
