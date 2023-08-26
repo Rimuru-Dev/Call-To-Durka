@@ -423,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 505.78992
+      value: 243.28558
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -459,7 +459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -302.89496
+      value: -171.64279
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1905,7 +1905,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca87f34824daa3498bd72e20d8b7fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yandexSDK: {fileID: 2211564899013586040}
   generalGameSettings:
     <TimeToStartAudioClip>k__BackingField: 3
     <SourceAudioKey>k__BackingField: Deadpool
@@ -1939,7 +1938,7 @@ MonoBehaviour:
     <AudioClipKey>k__BackingField: MILOS
     <AudioClip>k__BackingField: {fileID: 1884016726}
   callViewController: {fileID: 2084309884}
-  callPanel: {fileID: 1790103053}
+  callPanelView: {fileID: 1790103053}
   callController: {fileID: 2084309885}
 --- !u!1 &929084863
 GameObject:
@@ -2038,7 +2037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 505.78992
+      value: 243.28558
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2074,7 +2073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -302.89496
+      value: -171.64279
       objectReference: {fileID: 0}
     - target: {fileID: 3835969478829208821, guid: 214670fb09cc91144b8f9e54f12e234b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2243,7 +2242,6 @@ GameObject:
   - component: {fileID: 1191256618}
   - component: {fileID: 1191256620}
   - component: {fileID: 1191256619}
-  - component: {fileID: 1191256621}
   m_Layer: 5
   m_Name: Root
   m_TagString: Untagged
@@ -2311,19 +2309,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191256617}
   m_CullTransparentMesh: 1
---- !u!114 &1191256621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191256617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10ebed5a63174e8fb3ad955bfcef2020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioComponent: {fileID: 348431372}
 --- !u!1 &1239019678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,7 +3400,7 @@ GameObject:
   - component: {fileID: 1790103052}
   - component: {fileID: 1790103053}
   m_Layer: 0
-  m_Name: CallPanel
+  m_Name: CallPanelView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3452,7 +3437,6 @@ MonoBehaviour:
   characterName: {fileID: 574163492}
   callCharacter: {fileID: 572945624}
   pickUpPhoneButton: {fileID: 997064761}
-  hangUpPhoneButton: {fileID: 161408516}
 --- !u!1 &1884016724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,12 +3920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioComponent: {fileID: 348431372}
-  sourceAudios:
-  - {fileID: 374964782}
-  - {fileID: 767374260}
-  - {fileID: 1239019680}
-  - {fileID: 1433951823}
-  - {fileID: 1884016726}
 --- !u!1001 &2030490833094806050
 PrefabInstance:
   m_ObjectHideFlags: 0
