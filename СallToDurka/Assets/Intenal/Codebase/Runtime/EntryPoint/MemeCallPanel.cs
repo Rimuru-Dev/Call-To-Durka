@@ -6,15 +6,12 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 {
     [SelectionBase]
     [DisallowMultipleComponent]
-    public sealed class CallPanelView : MonoBehaviour
+    public sealed class MemeCallPanel : MonoBehaviour
     {
-        [Header("Call Panel")]
         [field: SerializeField] public Transform callPanel;
         [field: SerializeField] public TextMeshProUGUI characterName;
         [field: SerializeField] public Image callCharacter;
         [field: SerializeField] public Button pickUpPhoneButton;
-
-        [Header("Call Buttons")] 
-        [field: SerializeField] public Button[] CallButtons;
+        [field: SerializeField] public Button[] memeCallButtons;
     }
 }

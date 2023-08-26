@@ -291,20 +291,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 66362287}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: RimuruDev.Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: StartCall
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &144150564
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,20 +540,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 161408515}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: RimuruDev.Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: HangUpPhone
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &203809840
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,20 +820,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 236041892}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: RimuruDev.Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: StartCall
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &348431372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,8 +1898,7 @@ MonoBehaviour:
     <Sprite>k__BackingField: {fileID: 21300000, guid: ac174ece9fdd13a48a015980a1965d17, type: 3}
     <AudioClipKey>k__BackingField: MILOS
     <AudioClip>k__BackingField: {fileID: 1884016726}
-  callViewController: {fileID: 2084309884}
-  callPanelView: {fileID: 1790103053}
+  memeCallPanel: {fileID: 1790103053}
   callController: {fileID: 2084309885}
 --- !u!1 &929084863
 GameObject:
@@ -1972,6 +1932,7 @@ Transform:
   - {fileID: 914086925}
   - {fileID: 2211564899013586043}
   - {fileID: 2084309883}
+  - {fileID: 939219082}
   - {fileID: 1790103052}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1991,6 +1952,37 @@ MonoBehaviour:
   flattenMode: 0
   flattenSpace: 0
   destroyAfterFlatten: 1
+--- !u!1 &939219081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939219082}
+  m_Layer: 0
+  m_Name: CallPanelView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &939219082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939219081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929084864}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &997064757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2167,20 +2159,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 997064760}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: RimuruDev.Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: PickUpPhone
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1027110447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,20 +2598,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1239946441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: RimuruDev.Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: StartCall
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &1349412734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3400,7 +3366,7 @@ GameObject:
   - component: {fileID: 1790103052}
   - component: {fileID: 1790103053}
   m_Layer: 0
-  m_Name: CallPanelView
+  m_Name: CallMemePanelView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3437,6 +3403,12 @@ MonoBehaviour:
   characterName: {fileID: 574163492}
   callCharacter: {fileID: 572945624}
   pickUpPhoneButton: {fileID: 997064761}
+  memeCallButtons:
+  - {fileID: 3575500975696963305}
+  - {fileID: 1957529149}
+  - {fileID: 66362288}
+  - {fileID: 236041893}
+  - {fileID: 1239946442}
 --- !u!1 &1884016724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3848,20 +3820,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1957529148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: RimuruDev.Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: StartCall
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2084309882
 GameObject:
   m_ObjectHideFlags: 0
@@ -3907,6 +3866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e737837e7584ae382502fb5daf59de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  callController: {fileID: 0}
 --- !u!114 &2084309885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4301,17 +4261,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3575500975696963304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084309884}
-        m_TargetAssemblyTypeName: RimuruDev.Intenal.Codebase.Runtime.EntryPoint.CallViewController,
-          Assembly-CSharp
-        m_MethodName: StartCall
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

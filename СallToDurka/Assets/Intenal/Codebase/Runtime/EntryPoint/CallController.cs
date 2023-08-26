@@ -1,28 +1,45 @@
 ﻿// TODO: Избавиться от MonoBehaviour, разделить класс.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimuruDev.Plugins.Audio.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 {
     public sealed class CallController : MonoBehaviour
     {
-        private CallPanelView _callPanelView;
+        private MemeCallPanel _memeCallPanel;
         private GeneralGameSettings generalGameSettings;
         private List<CharacterData> characterDatas;
         private int currentCharacter = -1;
         public GameObject audioComponent;
 
         public void Init(
-            CallPanelView callPanelView,
+            MemeCallPanel memeCallPanel,
             GeneralGameSettings generalGameSettings,
             List<CharacterData> characterDatas)
         {
-            this._callPanelView = callPanelView;
+            this._memeCallPanel = memeCallPanel;
             this.generalGameSettings = generalGameSettings;
             this.characterDatas = characterDatas;
+        }
+
+        private void Start()
+        {
+            for (var i = 0; i < _memeCallPanel.memeCallButtons.Length; i++)
+            {
+                var id = i;
+                _memeCallPanel.memeCallButtons[i].onClick.AddListener(() => { StartCall(id); });
+            }
+        }
+
+        private void OnDestroy()
+        {
+            foreach (var callButton in _memeCallPanel.memeCallButtons)
+                callButton.onClick.RemoveAllListeners();
         }
 
         public void StartCall(int callID) =>
@@ -37,7 +54,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             character.AudioClip.Play(character.AudioClipKey);
             character.AudioClip.Loop = true;
 
-            _callPanelView.pickUpPhoneButton.gameObject.SetActive(false);
+            _memeCallPanel.pickUpPhoneButton.gameObject.SetActive(false);
         }
 
         public void HangUpPhone()
@@ -53,8 +70,10 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
 
             currentCharacter = callID;
 
-            _callPanelView.callCharacter.sprite = characterDatas.First(character => character.ID == currentCharacter).Sprite;
-            _callPanelView.characterName.text = characterDatas.First(character => character.ID == currentCharacter).Name;
+            _memeCallPanel.callCharacter.sprite =
+                characterDatas.First(character => character.ID == currentCharacter).Sprite;
+            _memeCallPanel.characterName.text =
+                characterDatas.First(character => character.ID == currentCharacter).Name;
 
             generalGameSettings.SourceAudio.Play(generalGameSettings.SourceAudioKey);
             generalGameSettings.SourceAudio.Loop = true;
@@ -69,8 +88,8 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
             generalGameSettings.SourceAudio.Stop();
             generalGameSettings.SourceAudio.Loop = false;
 
-            _callPanelView.pickUpPhoneButton.gameObject.SetActive(true);
-            _callPanelView.pickUpPhoneButton.onClick.RemoveAllListeners();
+            _memeCallPanel.pickUpPhoneButton.gameObject.SetActive(true);
+            _memeCallPanel.pickUpPhoneButton.onClick.RemoveAllListeners();
 
             StopAllAudioSources();
 
@@ -82,7 +101,7 @@ namespace RimuruDev.Intenal.Codebase.Runtime.EntryPoint
         }
 
         private void SetActivePanelState(bool isActive) =>
-            _callPanelView.callPanel.gameObject.SetActive(isActive);
+            _memeCallPanel.callPanel.gameObject.SetActive(isActive);
 
         private void StopAllAudioSources()
         {
