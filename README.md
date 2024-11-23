@@ -34,6 +34,8 @@
  
 ![background_800-470](https://github.com/RimuruDev/Call-To-Durka/assets/85500556/e11e90fe-f8e2-4b87-98f0-54a60cac7ad2)
 
+# Warning
+- Yandex Plugin is Outdated!
 
 
 ## Switch to WebGL.
