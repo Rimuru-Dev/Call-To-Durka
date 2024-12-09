@@ -1,7 +1,5 @@
 # 💖 Call To Durka 💖
 
-[Telegram](https://t.me/DevLogUnity)
-
  <p align="center">
   <a>
     <img alt="Made With Unity" src="https://img.shields.io/badge/made%20with-Unity-57b9d3.svg?logo=Unity">
